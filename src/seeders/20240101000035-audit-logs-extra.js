@@ -20,13 +20,11 @@ module.exports = {
         entityType: 'Payment',
         entityId: uuidv4(),
         oldValues: null,
-        newValues: { status: 'created' },
+        newValues: JSON.stringify({ status: 'created' }),
         ipAddress: '203.0.113.100',
         userAgent: 'SeederAgent/1.0',
         details: 'Extra audit log entry',
-        timestamp: new Date(),
-        createdAt: new Date(),
-        updatedAt: new Date()
+        timestamp: new Date()
       }
     ];
 

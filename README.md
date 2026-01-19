@@ -48,9 +48,9 @@ A comprehensive full-stack bookkeeping and accounting solution featuring a Node.
 
 ## Prerequisites
 
-- Node.js (v14 or higher)
+- Node.js (v18.x recommended)
+- npm (v9.x recommended)
 - MySQL (v5.7 or higher)
-- npm or yarn
 
 ## Installation
 
@@ -77,7 +77,7 @@ A comprehensive full-stack bookkeeping and accounting solution featuring a Node.
 3. **Environment Configuration:**
    Create a `.env` file in the root directory (based on `.env.example` if available) with the following variables:
    ```env
-   PORT=3000
+   PORT=4018
    NODE_ENV=development
    DB_HOST=localhost
    DB_PORT=3306
@@ -93,7 +93,7 @@ A comprehensive full-stack bookkeeping and accounting solution featuring a Node.
    ```bash
    npm run db:reset
    ```
-   *(This command runs `db:migrate:undo:all`, `db:migrate`, and `db:seed:all`)*
+   *(This command runs `db:drop`, `db:create`, `db:migrate`, and `db:seed:all`)*
 
 ## Running the Application
 
@@ -123,7 +123,7 @@ To build the frontend and serve it via the Node.js backend:
    ```bash
    npm start
    ```
-   The application will be available at `http://localhost:3000` (or your configured port).
+   The application will be available at `http://localhost:4018` (API) or `http://localhost:3018` (Frontend Dev).
 
 ## API Documentation
 

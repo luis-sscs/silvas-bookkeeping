@@ -13,9 +13,8 @@ module.exports = {
       'audit_logs',
       {
         action: 'update',
-        newValues: { status: 'updated' },
-        details: 'Updated audit log entry',
-        updatedAt: new Date()
+        newValues: JSON.stringify({ status: 'updated' }),
+        details: 'Updated audit log entry'
       },
       { id: auditLog.id }
     );
@@ -35,9 +34,8 @@ module.exports = {
       'audit_logs',
       {
         action: 'create',
-        newValues: { status: 'created' },
-        details: 'Extra audit log entry',
-        updatedAt: new Date()
+        newValues: JSON.stringify({ status: 'created' }),
+        details: 'Extra audit log entry'
       },
       { id: auditLog.id }
     );

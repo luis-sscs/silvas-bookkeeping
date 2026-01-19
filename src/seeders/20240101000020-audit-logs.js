@@ -23,14 +23,12 @@ module.exports = {
         action: action,
         entityType: entityType,
         entityId: uuidv4(),
-        oldValues: action === 'update' ? { field: 'oldValue' } : null,
-        newValues: action !== 'delete' ? { field: 'newValue' } : null,
+        oldValues: action === 'update' ? JSON.stringify({ field: 'oldValue' }) : null,
+        newValues: action !== 'delete' ? JSON.stringify({ field: 'newValue' }) : null,
         ipAddress: `192.168.1.${Math.floor(Math.random() * 255)}`,
         userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
         details: `${action} operation on ${entityType}`,
-        timestamp: new Date(Date.now() - Math.random() * 7 * 24 * 60 * 60 * 1000),
-        createdAt: new Date(),
-        updatedAt: new Date()
+        timestamp: new Date(Date.now() - Math.random() * 7 * 24 * 60 * 60 * 1000)
       });
     }
 

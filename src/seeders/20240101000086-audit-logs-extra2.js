@@ -20,13 +20,11 @@ module.exports = {
         entityType: 'Customer',
         entityId: uuidv4(),
         oldValues: null,
-        newValues: { synced: true },
+        newValues: JSON.stringify({ synced: true }),
         ipAddress: '203.0.113.101',
         userAgent: 'SeederAgent/2.0',
         details: 'Second extra audit log entry',
-        timestamp: new Date(),
-        createdAt: new Date(),
-        updatedAt: new Date()
+        timestamp: new Date()
       }
     ];
 

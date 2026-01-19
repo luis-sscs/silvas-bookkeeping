@@ -5,14 +5,14 @@ module.exports = {
     const currencies = [
       {
         id: uuidv4(),
-        currencyCode: 'CAD',
-        currencyName: 'Canadian Dollar',
-        symbol: '$',
-        exchangeRate: 1.35,
+        currencyCode: 'NZD',
+        currencyName: 'New Zealand Dollar',
+        symbol: 'NZ$',
+        exchangeRate: 1.63,
         baseCurrency: false,
         isActive: true,
         lastUpdated: new Date(),
-        country: 'Canada',
+        country: 'New Zealand',
         createdAt: new Date(),
         updatedAt: new Date()
       }
@@ -21,6 +21,6 @@ module.exports = {
     await queryInterface.bulkInsert('currencies', currencies);
   },
   down: async (queryInterface) => {
-    await queryInterface.bulkDelete('currencies', { currencyCode: 'CAD' }, {});
+    await queryInterface.bulkDelete('currencies', { currencyCode: 'NZD' }, {});
   }
 };

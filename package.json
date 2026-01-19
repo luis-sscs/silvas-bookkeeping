@@ -9,7 +9,7 @@
     "test": "jest --coverage",
     "db:migrate": "sequelize-cli db:migrate",
     "db:seed": "sequelize-cli db:seed:all",
-    "db:reset": "sequelize-cli db:migrate:undo:all && sequelize-cli db:migrate && sequelize-cli db:seed:all",
+    "db:reset": "sequelize-cli db:drop && sequelize-cli db:create && sequelize-cli db:migrate && sequelize-cli db:seed:all",
     "heroku-postbuild": "cd _frontend && npm install && npm run build",
     "build:frontend": "cd _frontend && npm install && npm run build"
   },
@@ -25,7 +25,7 @@
     "jsonwebtoken": "^9.0.3",
     "mysql2": "^3.6.5",
     "sequelize": "^6.37.7",
-    "uuid": "^13.0.0"
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "jest": "^30.2.0",
