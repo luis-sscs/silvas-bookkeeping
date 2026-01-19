@@ -32,7 +32,7 @@ module.exports = {
       updatedAt: new Date()
     }));
 
-    await queryInterface.bulkInsert('products', productRecords);
+    await queryInterface.bulkInsert('products', productRecords, { ignoreDuplicates: true });
   },
 
   down: async (queryInterface, Sequelize) => {

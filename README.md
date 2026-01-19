@@ -2,6 +2,9 @@
 
 A comprehensive full-stack bookkeeping and accounting solution featuring a Node.js/Express backend and a React frontend. This application provides robust management for invoices, estimates, expenses, inventory, and more.
 
+## Live Demo
+- **API Base URL**: [https://silvas-bookkeeping-api-8b056dc73f14.herokuapp.com/](https://silvas-bookkeeping-api-8b056dc73f14.herokuapp.com/)
+
 ## Features
 
 - **🔐 Authentication & Security**

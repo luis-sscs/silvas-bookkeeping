@@ -109,7 +109,7 @@ module.exports = {
       }
     ];
 
-    await queryInterface.bulkInsert('currencies', currencies);
+    await queryInterface.bulkInsert('currencies', currencies, { ignoreDuplicates: true });
   },
 
   down: async (queryInterface, Sequelize) => {

@@ -99,7 +99,7 @@ module.exports = {
       }
     ];
 
-    await queryInterface.bulkInsert('customers', customers);
+    await queryInterface.bulkInsert('customers', customers, { ignoreDuplicates: true });
   },
 
   down: async (queryInterface, Sequelize) => {
