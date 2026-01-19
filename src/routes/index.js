@@ -1,0 +1,40 @@
+const express = require('express');
+const router = express.Router();
+
+const invoiceRoutes = require('./invoices');
+const estimateRoutes = require('./estimates');
+const expenseRoutes = require('./expenses');
+const productRoutes = require('./products');
+const customerRoutes = require('./customers');
+const reportRoutes = require('./reports');
+const paymentRoutes = require('./payments');
+const taxRoutes = require('./taxes');
+const invoiceLineItemRoutes = require('./invoiceLineItems');
+const budgetRoutes = require('./budgets');
+const auditLogRoutes = require('./auditLogs');
+const recurringInvoiceRoutes = require('./recurringInvoices');
+const paymentReminderRoutes = require('./paymentReminders');
+const inventoryRoutes = require('./inventory');
+const currencyRoutes = require('./currencies');
+const salesforceRoutes = require('./salesforce');
+const authRoutes = require('./auth');
+
+router.use('/auth', authRoutes);
+router.use('/invoices', invoiceRoutes);
+router.use('/estimates', estimateRoutes);
+router.use('/expenses', expenseRoutes);
+router.use('/products', productRoutes);
+router.use('/customers', customerRoutes);
+router.use('/reports', reportRoutes);
+router.use('/payments', paymentRoutes);
+router.use('/taxes', taxRoutes);
+router.use('/invoice-line-items', invoiceLineItemRoutes);
+router.use('/budgets', budgetRoutes);
+router.use('/audit-logs', auditLogRoutes);
+router.use('/recurring-invoices', recurringInvoiceRoutes);
+router.use('/payment-reminders', paymentReminderRoutes);
+router.use('/inventory', inventoryRoutes);
+router.use('/currencies', currencyRoutes);
+router.use('/salesforce', salesforceRoutes);
+
+module.exports = router;
