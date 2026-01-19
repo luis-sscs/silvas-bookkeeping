@@ -2,8 +2,8 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import api from '../../api/client';
 
 const DEFAULT_TEST_USER = {
-  username: 'testuser',
-  password: 'password123'
+  email: 'admin@silvas.com',
+  password: 'admin123'
 };
 
 export const login = createAsyncThunk('auth/login', async (credentials = DEFAULT_TEST_USER) => {

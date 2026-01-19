@@ -22,7 +22,7 @@ class AuthController {
   async login(req, res) {
     try {
       const { email, password } = req.body;
-      
+      debugger;
       if (!email || !password) {
         return res.status(400).json({ 
           error: 'Missing required fields',
