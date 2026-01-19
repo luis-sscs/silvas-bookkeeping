@@ -50,15 +50,16 @@ Or if on a different branch:
 git push heroku copilot/create-nodejs-api-structure:main
 ```
 
-### 7. Run Migrations
-Migrations run automatically via the release phase in Procfile, but you can also run manually:
-```bash
-heroku run npx sequelize-cli db:migrate
-```
+### 7. Run Migrations & Seeders
+Migrations and Seeders run automatically via the release phase in Procfile.
+The release command is configured to:
+1. Run pending migrations
+2. Run pending seeders (tracked via SequelizeData table)
 
-### 8. Seed Database (Optional)
+### 8. Verification (Optional)
+You can verify the database state:
 ```bash
-heroku run npx sequelize-cli db:seed:all
+heroku run npx sequelize-cli db:migrate:status
 ```
 
 ### 9. Open Application
