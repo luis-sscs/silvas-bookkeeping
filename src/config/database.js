@@ -8,7 +8,8 @@ module.exports = {
     host: process.env.DB_HOST || 'localhost',
     port: process.env.DB_PORT || 3306,
     dialect: 'mysql',
-    logging: false
+    logging: false,
+    seederStorage: 'sequelize'
   },
   test: {
     dialect: 'sqlite',
@@ -19,6 +20,7 @@ module.exports = {
     use_env_variable: 'DATABASE_URL',
     dialect: 'mysql',
     logging: false,
+    seederStorage: 'sequelize',
     dialectOptions: {
       ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false
     }
